@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "cschlosser.doxdocgen",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "evondev.indent-rainbow-palettes",
+    "formulahendry.code-runner",
+    "llvm-vs-code-extensions.vscode-clangd",
+    "michaelcurrin.auto-commit-msg",
+    "ms-vscode.cpptools-extension-pack",
+    "oderwat.indent-rainbow",
+    "redhat.vscode-yaml",
+    "seaube.clangformat",
+    "spmeesseman.vscode-taskexplorer",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}

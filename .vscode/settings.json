@@ -1,0 +1,25 @@
+{
+  "[c]": {
+    "editor.defaultFormatter": "seaube.clangformat"
+
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "json.schemas": [
+    {
+      "fileMatch": [".clang-format"],
+      "url": "https://json.schemastore.org/clang-format.json"
+    }
+  ],
+  "yaml.schemas": {
+    "https://json.schemastore.org/clang-format.json": ".clang-format"
+  },
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "cmake.options.statusBarVisibility": "visible",
+  "cmake.sourceDirectory": "/workspaces/Birthday-Wisher-C"
+}
