@@ -1,7 +1,6 @@
 {
   "[c]": {
     "editor.defaultFormatter": "seaube.clangformat"
-
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -10,6 +9,20 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": false
   },
+  "C_Cpp.clang_format_fallbackStyle": "LLVM",
+  "C_Cpp.default.cppStandard": "gnu++11",
+  "C_Cpp.default.cStandard": "gnu11",
+  "C_Cpp.default.intelliSenseMode": "gcc-x64",
+  "C_Cpp.doxygen.generatedStyle": "/**",
+  "C_Cpp.intelliSenseEngineFallback": "enabled",
+  "cmake.options.statusBarVisibility": "visible",
+  "cmake.sourceDirectory": "/workspaces/C-Code-Dump",
+  "code-runner.executorMap": {
+    "c": "cd $dir && gcc $fileName -o $workspaceRoot/out/$fileNameWithoutExt && $workspaceRoot/out/$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ $fileName -o $workspaceRoot/out/$fileNameWithoutExt && $workspaceRoot/out/$fileNameWithoutExt"
+  },
+  "code-runner.fileDirectoryAsCwd": true,
+  "code-runner.runInTerminal": true,
   "json.schemas": [
     {
       "fileMatch": [".clang-format"],
@@ -18,8 +31,5 @@
   ],
   "yaml.schemas": {
     "https://json.schemastore.org/clang-format.json": ".clang-format"
-  },
-  "C_Cpp.clang_format_fallbackStyle": "LLVM",
-  "cmake.options.statusBarVisibility": "visible",
-  "cmake.sourceDirectory": "/workspaces/Birthday-Wisher-C"
+  }
 }
