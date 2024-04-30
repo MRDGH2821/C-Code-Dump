@@ -20,7 +20,7 @@ void int_scan(int *number) {
 
 int main() {
   int a[10];
-  int num, i, flag;
+  int num, i, flag = 0;
 
   printf("Enter 5 numbers:\n");
   for (i = 0; i < 5; i++) {
