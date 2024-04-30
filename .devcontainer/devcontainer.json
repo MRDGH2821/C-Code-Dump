@@ -9,8 +9,10 @@
         "eamodio.gitlens",
         "esbenp.prettier-vscode",
         "evondev.indent-rainbow-palettes",
+        "formulahendry.code-runner",
         "llvm-vs-code-extensions.vscode-clangd",
         "michaelcurrin.auto-commit-msg",
+        "mine.cpplint",
         "ms-vscode.cpptools-extension-pack",
         "oderwat.indent-rainbow",
         "redhat.vscode-yaml",
@@ -20,13 +22,15 @@
       ]
     }
   },
-
   "features": {
     "ghcr.io/devcontainers-contrib/features/apt-packages": {
       "packages": "build-essential, clangd, clang-format, gdb"
     },
     "ghcr.io/devcontainers-contrib/features/npm-package": {
       "package": "mega-linter-runner"
+    },
+    "ghcr.io/devcontainers-contrib/features/pipx-package": {
+      "package": "cpplint"
     },
     "ghcr.io/devcontainers/features/docker-in-docker": {}
   },
