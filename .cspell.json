@@ -1,4 +1,5 @@
 {
+  "allowCompoundWords": true,
   "ignorePaths": [
     "**/node_modules/**",
     "**/vscode-extension/**",
@@ -7,10 +8,17 @@
     ".vscode",
     "megalinter",
     "package-lock.json",
-    "report"
+    "report",
+    ".devcontainer/**",
+    ".vscode/**"
   ],
   "language": "en",
   "noConfigSearch": true,
-  "words": ["megalinter", "oxsecurity"],
-  "version": "0.2"
+  "useGitignore": true,
+  "version": "0.2",
+  "words": [
+    "megalinter",
+    "MRDGH",
+    "oxsecurity"
+  ]
 }
