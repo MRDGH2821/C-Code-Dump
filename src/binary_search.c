@@ -34,15 +34,21 @@ int main() {
   int_scan(&search);
 
   int low = 0, high = SIZE - 1, mid;
+  int found = 0;
   while (low <= high) {
     mid = (low + high) / 2;
     if (arr[mid] == search) {
       printf("Number found at position %d\n", mid + 1);
-      return 0;
+      found = 1;
+      break;
     } else if (arr[mid] < search) {
       low = mid + 1;
     } else {
       high = mid - 1;
     }
   }
+  if (found == 0) {
+    printf("Number not found\n");
+  }
+  return 0;
 }
