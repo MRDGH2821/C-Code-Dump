@@ -1,24 +1,22 @@
 {
   "allowCompoundWords": true,
   "ignorePaths": [
-    "**/node_modules/**",
-    "**/vscode-extension/**",
+    "**/.devcontainer/**",
     "**/.git/**",
+    "**/.github/**",
+    "**/.gitignore",
     "**/.pnpm-lock.json",
-    ".vscode",
-    "megalinter",
-    "package-lock.json",
-    "report",
-    ".devcontainer/**",
-    ".vscode/**"
+    "**/.vscode/**",
+    "**/.vscode/**",
+    "**/megalinter/**",
+    "**/node_modules/**",
+    "**/report/**",
+    "**/vscode-extension/**",
+    "package-lock.json"
   ],
   "language": "en",
   "noConfigSearch": true,
   "useGitignore": true,
   "version": "0.2",
-  "words": [
-    "megalinter",
-    "MRDGH",
-    "oxsecurity"
-  ]
+  "words": ["fgets", "megalinter", "MRDGH", "oxsecurity", "strcmpi", "venv"]
 }
