@@ -10,6 +10,13 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
+
+void int_scan(int *number) {
+  char s[10] = {};
+  fgets(s, sizeof(number), stdin);
+  *number = strtol(s, NULL, 10);
+}
 
 int main() {
   int a[10];
@@ -17,7 +24,7 @@ int main() {
 
   printf("Enter 10 numbers:\n");
   for (i = 0; i < 10; i++) {
-    scanf("%d", &a[i]);
+    int_scan(&a[i]);
   }
 
   for (i = 0; i < 9; i++) {

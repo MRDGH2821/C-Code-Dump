@@ -10,21 +10,28 @@
  */
 
 #include <stdio.h>
+#include <stdlib.h>
+
+void int_scan(int *number) {
+  char s[10] = {};
+  fgets(s, sizeof(number), stdin);
+  *number = strtol(s, NULL, 10);
+}
 
 int main() {
   int SIZE;
   printf("Enter the quantity of numbers to put: ");
-  scanf("%d", &SIZE);
+  int_scan(&SIZE);
   int arr[SIZE];
 
   printf("Enter numbers in ascending order:\n");
   for (int i = 0; i < SIZE; i++) {
-    scanf("%d", &arr[i]);
+    int_scan(&arr[i]);
   }
 
   int search;
   printf("Enter number to search: ");
-  scanf("%d", &search);
+  int_scan(&search);
 
   int low = 0, high = SIZE - 1, mid;
   while (low <= high) {
