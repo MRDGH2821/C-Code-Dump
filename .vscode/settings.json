@@ -26,6 +26,9 @@
   "cpplint.cpplintPath": "/usr/local/py-utils/bin/cpplint",
   "doxdocgen.generic.useGitUserEmail": true,
   "doxdocgen.generic.useGitUserName": true,
+  "files.associations": {
+    ".clang-tidy": "yaml"
+  },
   "json.schemas": [
     {
       "fileMatch": [".clang-format"],
