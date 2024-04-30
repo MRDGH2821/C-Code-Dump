@@ -54,3 +54,4 @@ build/
 .cache
 out/
 megalinter-reports/
+report/
