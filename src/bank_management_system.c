@@ -42,9 +42,7 @@ void fordelay(int j) {
   }
 }
 
-void new_acc()
-
-{
+void new_acc() {
   int choice;
   FILE *ptr;
 
@@ -334,9 +332,7 @@ void erase(void) {
               add.acc_no, add.name, add.dob.month, add.dob.day, add.dob.year,
               add.age, add.address, add.citizenship, add.phone, add.acc_type,
               add.amt, add.deposit.month, add.deposit.day, add.deposit.year);
-    }
-
-    else {
+    } else {
       test++;
       printf("\nRecord deleted successfully!\n");
     }
@@ -505,9 +501,7 @@ void see(void) {
   if (main_exit == 1) {
     system("cls");
     menu();
-  }
-
-  else {
+  } else {
     system("cls");
     close();
   }
@@ -592,9 +586,7 @@ int main() {
     if (main_exit == 1) {
       system("cls");
       main();
-    }
-
-    else if (main_exit == 0) {
+    } else if (main_exit == 0) {
       system("cls");
       close();
     } else {
