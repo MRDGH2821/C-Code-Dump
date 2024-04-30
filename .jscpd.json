@@ -1,6 +1,6 @@
 {
-  "threshold": 0,
-  "reporters": ["html", "markdown"],
+  "blame": true,
+  "gitignore": true,
   "ignore": [
     "**/node_modules/**",
     "**/.git/**",
@@ -12,5 +12,7 @@
     "**/report/**",
     "**/*.svg"
   ],
-  "ignorePattern": ["void int_scan.*s*char.*s*fgets.*s**number.*\n}"]
+  "ignorePattern": ["void\\sint_scan.*\\s*char.*\\s*fgets.*\\s*\\*number.*"],
+  "reporters": ["html", "markdown"],
+  "threshold": 0
 }
