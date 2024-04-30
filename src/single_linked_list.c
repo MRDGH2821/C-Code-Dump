@@ -6,9 +6,9 @@ struct node {
 };
 
 void insert(struct node nd, int ndata) {
-  struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
+  struct Node *new_node = (struct Node *)malloc(sizeof(struct node));
   new_node->data = ndata;
-  nd->next = new_node;
+  nd.next = new_node;
   new_node->next = NULL;
 };
 
@@ -23,22 +23,24 @@ int main() {
   int ch = 1;
   int dt;
   struct node head;
-  head->next = NULL;
-  
+  head.next = NULL;
+
   while (ch != 0) {
     printf("1.Insert\n2.Display\n0.Exit\n\n");
     scanf("%d", &ch);
-    
+
     switch (ch) {
-      case 1:
-        printf("Enter number: ") scanf("%d", &dt);
-        insert(&head, dt) break;
-        
-      case 2:
-        printList(&head);
-        
-      case 0:
-        exit();
-    };
+    case 1:
+      printf("Enter number: ");
+      scanf("%d", &dt);
+      insert(head, dt);
+      break;
+
+    case 2:
+      printList(&head);
+
+    case 0:
+      exit();
+    }
   }
 }

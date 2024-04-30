@@ -9,7 +9,7 @@ struct employee {
 
 int main() {
   struct employee e[3];
-  
+
   for (int i = 0; i < 3; i++) {
     printf("Enter details of Employee %d", i + 1);
     printf("Name:");
@@ -21,20 +21,20 @@ int main() {
     printf("Salary:");
     scanf("%d", &e[i].salary);
   };
-  
+
   int c;
-  
+
   printf("Whose details to find (1,2,3,4)?");
-  
+
   scanf("%d", &c);
-  
+
   c = c - 1;
-  
+
   printf("Name: %s\n", e[c].name);
-  
+
   printf("Department: %s\n", e[c].dept);
-  
+
   printf("ID: %d\n", e[c].id);
-  
+
   printf("Salary: %d\n", e[c].salary);
 }

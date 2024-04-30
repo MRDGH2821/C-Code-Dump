@@ -32,8 +32,7 @@ char *months[] = {" ",
                   "\n\n\nSeptember",
                   "\n\n\nOctober",
                   "\n\n\nNovember",
-                  "\n\n\nDecember"
-                 };
+                  "\n\n\nDecember"};
 
 int inputyear(void) {
   int year;
@@ -56,7 +55,7 @@ int determineleapyear(int year) {
   if (year % 4 == FALSE && year % 100 != FALSE || year % 400 == FALSE) {
     days_in_month[2] = 29;
     return TRUE;
-    
+
   } else {
     days_in_month[2] = 28;
     return FALSE;
@@ -65,26 +64,26 @@ int determineleapyear(int year) {
 
 void calendar(int year, int daycode) {
   int month, day;
-  
+
   for (month = 1; month <= 12; month++) {
     printf("%s", months[month]);
     printf("\n\nSun  Mon  Tue  Wed  Thu  Fri  Sat\n");
-    
+
     for (day = 1; day <= 1 + daycode * 5; day++) {
       printf(" ");
     }
-    
+
     for (day = 1; day <= days_in_month[month]; day++) {
       printf("%2d", day);
-      
+
       if ((day + daycode) % 7 > 0) {
         printf("   ");
-        
+
       } else {
         printf("\n ");
       }
     }
-    
+
     daycode = (daycode + days_in_month[month]) % 7;
   }
 }

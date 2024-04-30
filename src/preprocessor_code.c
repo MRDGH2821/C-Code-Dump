@@ -19,4 +19,4 @@
 #define Thats ;
 #define all }
 This program will Prompt the user to enter two numbers Print their sum Exit with
-exit code 0 Thats all
+    exit code 0 Thats all

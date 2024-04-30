@@ -23,7 +23,7 @@ void deleteLast(struct node *top) {
 void display(struct node *top) {
   struct node *nd;
   nd = top;
-  
+
   while (nd->next != NULL) {
     printf("%d -> ", nd->data);
   }
@@ -35,26 +35,26 @@ int main() {
   top->data = 0;
   top->next = NULL;
   int ch = 1, dat;
-  
+
   while (ch != 0) {
     printf("Queue Operations\n\n1.Insert\n2.Delete\n3.Display\n0.Exit\n\nEnter "
            "choice:");
     scanf("%d", &ch);
-    
+
     switch (ch) {
-      case 1:
-        printf("Enter Data: ");
-        scanf("%d", dat);
-        push(dat, top);
-        break;
-        
-      case 2:
-        pop(top);
-        break;
-        
-      case 3:
-        display(top);
-        break;
+    case 1:
+      printf("Enter Data: ");
+      scanf("%d", dat);
+      push(dat, top);
+      break;
+
+    case 2:
+      pop(top);
+      break;
+
+    case 3:
+      display(top);
+      break;
     }
   }
 }

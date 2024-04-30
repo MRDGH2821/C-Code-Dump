@@ -23,18 +23,18 @@ int main() {
   printf("Enter the number to find its index:");
   int_scan(&index);
   int found = 0;
-  
+
   for (i = 0; i <= 6; i++) {
     if (index == a[i]) {
       printf("index of %d is %d:", index, i);
       found = 1;
       break;
-      
+
     } else {
       found = 0;
     }
   }
-  
+
   if (found == 0) {
     printf("Number not found");
   }
