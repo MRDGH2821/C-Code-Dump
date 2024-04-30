@@ -18,3 +18,4 @@ RUN if [ "${REINSTALL_CMAKE_VERSION_FROM_SOURCE}" != "none" ]; then \
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
 HEALTHCHECK NONE
+USER vscode
