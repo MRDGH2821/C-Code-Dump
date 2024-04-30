@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
 void int_scan(int *number) {
   char s[10] = {};
   fgets(s, sizeof(number), stdin);
@@ -21,20 +20,21 @@ void int_scan(int *number) {
 int main() {
   int a[7] = {10, 20, 30, 40, 50, 60, 70};
   int i, index;
-
   printf("Enter the number to find its index:");
   int_scan(&index);
-
   int found = 0;
+  
   for (i = 0; i <= 6; i++) {
     if (index == a[i]) {
       printf("index of %d is %d:", index, i);
       found = 1;
       break;
+      
     } else {
       found = 0;
     }
   }
+  
   if (found == 0) {
     printf("Number not found");
   }

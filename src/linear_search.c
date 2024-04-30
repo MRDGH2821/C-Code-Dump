@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
 void int_scan(int *number) {
   char s[10] = {};
   fgets(s, sizeof(number), stdin);
@@ -21,21 +20,25 @@ void int_scan(int *number) {
 int main() {
   int a[10];
   int num, i, flag = 0;
-
   printf("Enter 5 numbers:\n");
+  
   for (i = 0; i < 5; i++) {
     int_scan(&a[i]);
   }
+  
   printf("Enter number to be searched");
   int_scan(&num);
+  
   for (i = 0; i < 5; i++) {
     if (num == a[i]) {
       flag = 1;
       break;
     }
   }
+  
   if (flag == 1) {
     printf("Number found at %d", i + 1);
+    
   } else {
     printf("Number not found");
   }

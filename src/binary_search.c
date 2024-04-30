@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
 void int_scan(int *number) {
   char s[10] = {};
   fgets(s, sizeof(number), stdin);
@@ -23,32 +22,37 @@ int main() {
   printf("Enter the quantity of numbers to put: ");
   int_scan(&SIZE);
   int arr[SIZE];
-
   printf("Enter numbers in ascending order:\n");
+  
   for (int i = 0; i < SIZE; i++) {
     int_scan(&arr[i]);
   }
-
+  
   int search;
   printf("Enter number to search: ");
   int_scan(&search);
-
   int low = 0, high = SIZE - 1, mid;
   int found = 0;
+  
   while (low <= high) {
     mid = (low + high) / 2;
+    
     if (arr[mid] == search) {
       printf("Number found at position %d\n", mid + 1);
       found = 1;
       break;
+      
     } else if (arr[mid] < search) {
       low = mid + 1;
+      
     } else {
       high = mid - 1;
     }
   }
+  
   if (found == 0) {
     printf("Number not found\n");
   }
+  
   return 0;
 }

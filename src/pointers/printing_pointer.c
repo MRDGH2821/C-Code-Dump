@@ -1,5 +1,5 @@
 /**
- * @file pattern_printer.c
+ * @file printing_pointer.c
  * @author MRDGH2821 (ask.mrdgh2821@outlook.com)
  * @brief
  * @version 0.1
@@ -11,19 +11,8 @@
 
 #include <stdio.h>
 int main() {
-  int i = 5;
-  
-  while (i >= 1) {
-    int j = 1;
-    
-    while (j <= i) {
-      printf("A");
-      j++;
-    }
-    
-    printf("\n");
-    i--;
-  }
-  
+  int x = 0;
+  int *ptr = &x;
+  printf("%d\n", *ptr);
   return 0;
 }

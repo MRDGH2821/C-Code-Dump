@@ -19,7 +19,6 @@ void int_scan(int *number) {
 int main() {
   int val;
   int *p;
-
   p = &val;
   printf("Enter a value: ");
   int_scan(p);

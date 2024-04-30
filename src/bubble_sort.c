@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
 void int_scan(int *number) {
   char s[10] = {};
   fgets(s, sizeof(number), stdin);
@@ -21,8 +20,8 @@ void int_scan(int *number) {
 int main() {
   int a[10];
   int temp, i, j;
-
   printf("Enter 10 numbers:\n");
+
   for (i = 0; i < 10; i++) {
     int_scan(&a[i]);
   }
@@ -36,11 +35,16 @@ int main() {
       }
     }
   }
+
   printf("Sorted array is:\n");
+
   for (i = 0; i < 10; i++) {
     printf("%d", a[i]);
-    if (i < 9)
+
+    if (i < 9) {
       printf(", ");
+    }
   }
+
   return 0;
 }

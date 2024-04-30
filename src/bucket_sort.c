@@ -11,7 +11,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-
 #define ARRAY_SIZE 7
 #define BUCKETS 6
 #define BUCKET_CAPACITY 10
@@ -41,7 +40,6 @@ void int_scan(int *number) {
 void bucket_sort(int array[]) {
   int i, j;
   struct Node **buckets;
-
   // Create buckets and allocate memory size
   buckets = (struct Node **)malloc(sizeof(struct Node *) * BUCKETS);
 
@@ -74,6 +72,7 @@ void bucket_sort(int array[]) {
 
   printf("-------------\n");
   printf("Bucktets after sorting\n");
+
   for (i = 0; i < BUCKETS; i++) {
     printf("Bucket[%d]: ", i);
     print_buckets(buckets[i]);
@@ -84,6 +83,7 @@ void bucket_sort(int array[]) {
   for (j = 0, i = 0; i < BUCKETS; ++i) {
     struct Node *node;
     node = buckets[i];
+
     while (node) {
       array[j++] = node->data;
       node = node->next;
@@ -109,8 +109,10 @@ struct Node *insertion_sort(struct Node *list) {
   nodeList = list;
   k = list->next;
   nodeList->next = 0;
+
   while (k != 0) {
     struct Node *ptr;
+
     if (nodeList->data > k->data) {
       struct Node *tmp;
       tmp = k;
@@ -121,8 +123,9 @@ struct Node *insertion_sort(struct Node *list) {
     }
 
     for (ptr = nodeList; ptr->next != 0; ptr = ptr->next) {
-      if (ptr->next->data > k->data)
+      if (ptr->next->data > k->data) {
         break;
+      }
     }
 
     if (ptr->next != 0) {
@@ -132,6 +135,7 @@ struct Node *insertion_sort(struct Node *list) {
       tmp->next = ptr->next;
       ptr->next = tmp;
       continue;
+
     } else {
       ptr->next = k;
       k = k->next;
@@ -139,6 +143,7 @@ struct Node *insertion_sort(struct Node *list) {
       continue;
     }
   }
+
   return nodeList;
 }
 
@@ -161,6 +166,7 @@ void print_array(int array[]) {
   for (i = 0; i < ARRAY_SIZE; ++i) {
     printf("%d ", array[i]);
   }
+
   printf("\n");
 }
 
@@ -181,17 +187,16 @@ void print_buckets(struct Node *list) {
 // Driver code
 int main(void) {
   int array[ARRAY_SIZE];
-
   printf("Enter max double digit numbers below 59:\n");
+
   for (int i = 0; i < ARRAY_SIZE; i++) {
     int_scan(&array[i]);
   }
-  printf("-------------\n");
 
+  printf("-------------\n");
   printf("Initial array: ");
   print_array(array);
   printf("-------------\n");
-
   bucket_sort(array);
   printf("-------------\n");
   printf("Sorted array: ");
