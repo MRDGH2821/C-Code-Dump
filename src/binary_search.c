@@ -1,4 +1,16 @@
+/**
+ * @file binary_search.c
+ * @author MRDGH2821
+ * @brief Performs binary search on an array of numbers
+ * @version 0.1
+ * @date 2024-04-30
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
+
 #include <stdio.h>
+
 int main() {
   int SIZE;
   printf("Enter the quantity of numbers to put: ");
