@@ -34,6 +34,10 @@
     {
       "fileMatch": [".clang-format"],
       "url": "https://json.schemastore.org/clang-format.json"
+    },
+    {
+      "fileMatch": [".jscpd.json"],
+      "url": "https://json.schemastore.org/jscpd.json"
     }
   ],
   "yaml.schemas": {
