@@ -15,7 +15,7 @@
   "C_Cpp.default.intelliSenseMode": "gcc-x64",
   "C_Cpp.doxygen.generatedStyle": "/**",
   "C_Cpp.intelliSenseEngineFallback": "enabled",
-  "cmake.options.statusBarVisibility": "visible",
+  "cmake.options.statusBarVisibility": "compact",
   "cmake.sourceDirectory": "/workspaces/C-Code-Dump",
   "code-runner.executorMap": {
     "c": "cd $dir && gcc $fileName -o $workspaceRoot/out/$fileNameWithoutExt && $workspaceRoot/out/$fileNameWithoutExt",
