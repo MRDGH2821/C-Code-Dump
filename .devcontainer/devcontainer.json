@@ -26,7 +26,7 @@
   },
   "features": {
     "ghcr.io/devcontainers-contrib/features/apt-packages": {
-      "packages": "build-essential, clangd, clang-format, gdb"
+      "packages": "build-essential, clangd, clang-format, gdb, clang-tidy"
     },
     "ghcr.io/devcontainers-contrib/features/npm-package": {
       "package": "mega-linter-runner"
