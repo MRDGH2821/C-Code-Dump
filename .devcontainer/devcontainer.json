@@ -5,6 +5,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "cs128.cs128-clang-tidy",
         "cschlosser.doxdocgen",
         "eamodio.gitlens",
         "esbenp.prettier-vscode",
@@ -18,7 +19,8 @@
         "redhat.vscode-yaml",
         "seaube.clangformat",
         "spmeesseman.vscode-taskexplorer",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens"
       ]
     }
   },
