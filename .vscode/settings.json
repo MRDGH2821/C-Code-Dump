@@ -23,6 +23,9 @@
   },
   "code-runner.fileDirectoryAsCwd": true,
   "code-runner.runInTerminal": true,
+  "cpplint.cpplintPath": "/usr/local/py-utils/bin/cpplint",
+  "doxdocgen.generic.useGitUserEmail": true,
+  "doxdocgen.generic.useGitUserName": true,
   "json.schemas": [
     {
       "fileMatch": [".clang-format"],
