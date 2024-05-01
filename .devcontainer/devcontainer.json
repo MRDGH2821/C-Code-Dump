@@ -36,5 +36,9 @@
     },
     "ghcr.io/devcontainers/features/docker-in-docker": {}
   },
-  "name": "C Code dump dev container"
+  "name": "C Code dump dev container",
+  "onCreateCommand": {
+    "Install Astyle": "pipx install astyle",
+    "Install ls-lint": "npm install -g @ls-lint/ls-lint"
+  }
 }
