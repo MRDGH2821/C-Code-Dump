@@ -1,7 +1,7 @@
 # C-Code-Dump
 
-Contains codes made using c language
+Contains codes made using c language.
 
-# License
+## License
 
 [MIT](./LICENSE.md)
