@@ -1,2 +1,4 @@
 ls:
   .c: snake_case
+ignore:
+  - build
