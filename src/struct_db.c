@@ -1,44 +1,62 @@
-// WAP to perform following operations on any Database: 1. Add. 2. Delete. 3.
-// Modify. 4. Display. 5. Search.
+/**
+ * @file structs.c
+ * @author MRDGH2821 (ask.mrdgh2821@outlook.com)
+ * @brief Perform CRUD & Search operations on ny Database.
+ * @version 0.1
+ * @date 2024-05-12
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-int size = 4;
+void int_scan(int *number) {
+  char s[10] = {};
+  fgets(s, sizeof(number), stdin);
+  *number = strtol(s, NULL, 10);
+}
+
+void strcopy(char *source, char *dest) {
+  FILE *src_str = fmemopen(source, strlen(source), "r");
+  fgets(dest, sizeof(dest), src_str);
+}
+
+int SIZE = 4;
 struct db {
   char name[20];
   int ID;
 };
 
 int main() {
-  struct db p[size];
+  struct db p[SIZE];
   int c, id, index;
   printf("DB Manager");
 choice:
   printf("\n1. Add. \n2. Delete. \n3. Modify. \n4. Display. \n5. Search.\n6. "
          "Display All.\n(Any no.). Exit \nEnter choice:");
-  scanf("%d", &c);
+  int_scan(&c);
 
   switch (c) {
   case 1:
     printf("Enter data of 4 people:\n");
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < SIZE; i++) {
       printf("Enter Name:");
-      scanf("%s", p[i].name);
+      fgets(p[i].name, sizeof(p[i].name), stdin);
       printf("Enter ID:");
-      scanf("%d", &p[i].ID);
-    };
+      int_scan(&p[i].ID);
+    }
 
     goto choice;
-
     break;
 
   case 2:
     printf("Enter ID number to delete:\n");
-    scanf("%d", &id);
+    int_scan(&id);
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < SIZE; i++) {
       if (p[i].ID == id) {
         index = i;
 
@@ -52,7 +70,7 @@ choice:
 
     } else {
       char d[] = {'0', '1'};
-      strcpy(d, p[index].name);
+      strcopy(d, p[index].name);
       p[index].ID = 0;
       printf("Data deleted");
     }
@@ -62,19 +80,19 @@ choice:
 
   case 3:
     printf("Enter ID number to modify:\n");
-    scanf("%d", &index);
+    int_scan(&index);
     printf("Enter Name:");
-    scanf("%s", p[index].name);
+    fgets(p[index].name, sizeof(p[index].name), stdin);
     printf("Enter ID:");
-    scanf("%d", &p[index].ID);
+    int_scan(&p[index].ID);
     goto choice;
     break;
 
   case 4:
     printf("Enter ID number to display:\n");
-    scanf("%d", &id);
+    int_scan(&id);
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < SIZE; i++) {
       if (p[i].ID == id) {
         index = i;
 
@@ -96,9 +114,9 @@ choice:
 
   case 5:
     printf("Enter ID number to search:\n");
-    scanf("%d", &id);
+    int_scan(&id);
 
-    for (int i = 0; i < size; i++) {
+    for (int i = 0; i < SIZE; i++) {
       if (p[i].ID == id) {
         index = i;
         break;
@@ -119,8 +137,8 @@ choice:
     break;
 
   case 6:
-    for (int i = 0; i < size; i++) {
-      printf("%d:%s , ", p[i].ID, p[i].name);
+    for (int i = 0; i < SIZE; i++) {
+      printf("%d: %s , ", p[i].ID, p[i].name);
     }
 
     goto choice;
