@@ -21,7 +21,11 @@
         "spmeesseman.vscode-taskexplorer",
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens"
-      ]
+      ],
+      "settings": {
+        "editor.fontFamily": "MesloLGM Nerd Font",
+        "terminal.integrated.fontFamily": "MesloLGM Nerd Font"
+      }
     }
   },
   "features": {
@@ -40,5 +44,6 @@
   "onCreateCommand": {
     "Install Astyle": "pipx install astyle",
     "Install ls-lint": "npm install -g @ls-lint/ls-lint"
-  }
+  },
+  "postCreateCommand": "./.devcontainer/oh-my-posh-installer.sh"
 }
