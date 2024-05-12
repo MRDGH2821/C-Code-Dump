@@ -7,7 +7,6 @@
     "**/.gitignore",
     "**/.pnpm-lock.json",
     "**/.vscode/**",
-    "**/.vscode/**",
     "**/megalinter/**",
     "**/node_modules/**",
     "**/report/**",
@@ -19,10 +18,13 @@
   "useGitignore": true,
   "version": "0.2",
   "words": [
+    "Astyle",
+    "CPACK",
+    "MRDGH",
+    "astyle",
     "fgets",
     "fmemopen",
     "megalinter",
-    "MRDGH",
     "oxsecurity",
     "strcmpi",
     "venv"
