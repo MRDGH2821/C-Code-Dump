@@ -121,6 +121,14 @@
       "label": "Format file",
       "problemMatcher": [],
       "type": "shell"
+    },
+    {
+      "command": "npx -y mega-linter-runner --flavor c_cpp",
+      "detail": "Run Mega Linter on the workspace",
+      "group": "none",
+      "label": "Mega lint",
+      "problemMatcher": [],
+      "type": "shell"
     }
   ],
   "version": "2.0.0"
