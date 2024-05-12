@@ -119,6 +119,7 @@
         "kind": "none"
       },
       "label": "Format file",
+      "problemMatcher": [],
       "type": "shell"
     }
   ],
