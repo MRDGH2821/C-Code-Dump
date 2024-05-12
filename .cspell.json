@@ -18,5 +18,13 @@
   "noConfigSearch": true,
   "useGitignore": true,
   "version": "0.2",
-  "words": ["fgets", "megalinter", "MRDGH", "oxsecurity", "strcmpi", "venv"]
+  "words": [
+    "fgets",
+    "fmemopen",
+    "megalinter",
+    "MRDGH",
+    "oxsecurity",
+    "strcmpi",
+    "venv"
+  ]
 }
