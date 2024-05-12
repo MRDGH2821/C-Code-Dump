@@ -1,7 +1,22 @@
-// Queue application which can do operations of insertion and deletion
+/**
+ * @file queue.c
+ * @author MRDGH2821 (ask.mrdgh2821@outlook.com)
+ * @brief Queue application which can do operations of insertion and deletion
+ * @version 0.1
+ * @date 2024-05-12
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
 
-#include <stdio.h>
 #define MAX 50
+#include <stdio.h>
+#include <stdlib.h>
+void int_scan(int *number) {
+  char s[10] = {};
+  fgets(s, sizeof(number), stdin);
+  *number = strtol(s, NULL, 10);
+}
 int queue_array[MAX];
 int rear = -1;
 int front = -1;
@@ -18,7 +33,7 @@ void insert() {
     }
 
     printf("Insert the element in queue: ");
-    scanf("%d", &add_item);
+    int_scan(&add_item);
     rear = rear + 1;
     queue_array[rear] = add_item;
   }
@@ -61,7 +76,7 @@ int main() {
     printf("3.Display all elements of queue \n");
     printf("4.Quit \n");
     printf("Enter your choice : ");
-    scanf("%d", &choice);
+    int_scan(&choice);
 
     switch (choice) {
     case 1:

@@ -1,7 +1,7 @@
 /**
- * @file pointer_address.c
+ * @file pointer_to_character_pointer.c
  * @author MRDGH2821 (ask.mrdgh2821@outlook.com)
- * @brief Prints the address of a variable using a pointer
+ * @brief Pointer to character pointer
  * @version 0.1
  * @date 2024-05-12
  *
@@ -11,10 +11,8 @@
 
 #include <stdio.h>
 int main() {
-  int x = 0;
-  int *ptr = &x;
-  printf("%p\n", ptr);
-  x++;
-  printf("%p\n", ptr);
+  char *s = "hello";
+  char *p = s;
+  printf("%c\t%c\n", p[1], s[1]);
   return 0;
 }
