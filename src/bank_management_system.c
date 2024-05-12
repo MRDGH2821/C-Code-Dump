@@ -9,6 +9,7 @@
  *
  */
 
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -37,7 +38,7 @@ int main_exit;
 void menu();
 
 void close_program() {
-  printf("\n\n\n\nThis C Mini Project is developed by Code With C team!");
+  printf("\n\n\nThis C Mini Project is developed by Code With C team!\n");
 }
 
 struct date {
@@ -633,23 +634,27 @@ void menu(void) {
   }
 }
 
+bool is_string_equal(char *str1, char *str2) {
+  int i = 0;
+
+  while (str1[i] != '\0' && str2[i] != '\0') {
+    if (str1[i] != str2[i]) {
+      return false;
+    }
+
+    i++;
+  }
+
+  return true;
+}
+
 int main() {
   char pass[15], password[15] = "projectnotes";
   int i = 0;
   printf("\n\n\t\tEnter the password to login:");
   fgets(pass, sizeof(pass), stdin);
 
-  /*do
-   * {
-   * //if (pass[i]!=13&&pass[i]!=8)
-   *  {
-   *      printf("*");
-   *      pass[i]=getch();
-   *      i++;
-   *  }
-   * }while (pass[i]!=13);
-   * pass[10]='\0';*/
-  if (strcmp(pass, password) == 0) {
+  if (is_string_equal(pass, password)) {
     printf("\n\nPassword Match!\nLOADING");
 
     for (i = 0; i <= 6; i++) {
