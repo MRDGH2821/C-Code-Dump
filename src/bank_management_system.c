@@ -33,6 +33,11 @@ void float_scan(float *number) {
   *number = strtof(s, NULL);
 }
 
+void strcopy(char *source, char *dest) {
+  FILE *src_str = fmemopen(source, strlen(source), "r");
+  fgets(dest, sizeof(dest), src_str);
+}
+
 int i, j;
 int main_exit;
 void menu();
@@ -44,7 +49,7 @@ void close_program() {
 struct date {
   int month, day, year;
 };
-struct {
+struct account {
   char name[60];
   int acc_no, age;
   char address[60];
@@ -61,6 +66,69 @@ float interest(float t, float amount, int rate) {
   float SI;
   SI = (rate * t * amount) / 100.0;
   return (SI);
+}
+struct account* get_all_accounts() {
+  char buffer[256];
+  static struct account temp;
+  FILE *file = fopen("record.dat", "r");
+  struct account accounts[100];
+  int index = 0;
+  if (file != NULL) {
+    char *saveptr;
+    while (fgets(buffer, sizeof(buffer), file) != NULL) {
+      char *token = strtok_r(buffer, " ", &saveptr);
+      temp.acc_no = atoi(token);
+
+      token = strtok_r(NULL, " ", &saveptr);
+      strcopy(token, temp.name);
+      temp.name[sizeof(temp.name) - 1] = '\0';
+
+      token = strtok_r(NULL, "/", &saveptr);
+      temp.dob.month = atoi(token);
+
+      token = strtok_r(NULL, "/", &saveptr);
+      temp.dob.day = atoi(token);
+
+      token = strtok_r(NULL, " ", &saveptr);
+      temp.dob.year = atoi(token);
+
+      token = strtok_r(NULL, " ", &saveptr);
+      temp.age = atoi(token);
+
+      token = strtok_r(NULL, " ", &saveptr);
+      strcopy(token, temp.address);
+      temp.address[sizeof(temp.address) - 1] = '\0';
+
+      token = strtok_r(NULL, " ", &saveptr);
+      strcopy(token, temp.citizenship);
+      temp.citizenship[sizeof(temp.citizenship) - 1] = '\0';
+
+      token = strtok_r(NULL, " ", &saveptr);
+      temp.phone = atof(token);
+
+      token = strtok_r(NULL, " ", &saveptr);
+      strcopy(token, temp.acc_type);
+      temp.acc_type[sizeof(temp.acc_type) - 1] = '\0';
+
+      token = strtok_r(NULL, " ", &saveptr);
+      temp.amt = atof(token);
+
+      token = strtok_r(NULL, "/", &saveptr);
+      temp.deposit.month = atoi(token);
+
+      token = strtok_r(NULL, "/", &saveptr);
+      temp.deposit.day = atoi(token);
+
+      token = strtok_r(NULL, "\n", &saveptr);
+      temp.deposit.year = atoi(token);
+
+      accounts[index] = temp;
+      index++;
+    }
+    fclose(file);
+  }
+
+  return accounts;
 }
 
 void new_acc() {
