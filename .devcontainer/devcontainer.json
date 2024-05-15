@@ -1,7 +1,4 @@
 {
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -40,6 +37,7 @@
     },
     "ghcr.io/devcontainers/features/docker-in-docker": {}
   },
+  "image": "mcr.microsoft.com/devcontainers/base",
   "name": "C Code dump dev container",
   "onCreateCommand": {
     "Install Astyle": "pipx install astyle",
