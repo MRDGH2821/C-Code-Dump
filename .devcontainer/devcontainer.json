@@ -14,10 +14,10 @@
         "llvm-vs-code-extensions.vscode-clangd",
         "michaelcurrin.auto-commit-msg",
         "mine.cpplint",
-        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cpptools",
+        "ms-vscode.makefile-tools",
         "oderwat.indent-rainbow",
         "redhat.vscode-yaml",
-        "seaube.clangformat",
         "spmeesseman.vscode-taskexplorer",
         "streetsidesoftware.code-spell-checker",
         "usernamehw.errorlens"
